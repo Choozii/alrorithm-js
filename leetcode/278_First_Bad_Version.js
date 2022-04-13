@@ -20,9 +20,7 @@ var solution = function (isBadVersion) {
   return function (n) {
     let startIdx = 1;
     let endIdx = n;
-    /*TODO: <= 사용하는 경우, time limit exceeded */
     while (startIdx < endIdx) {
-      /*TODO: preventing overflow */
       let midIdx = startIdx + Math.floor((endIdx - startIdx) / 2);
       if (isBadVersion(midIdx)) {
         endIdx = midIdx;
